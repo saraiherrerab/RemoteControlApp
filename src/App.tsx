@@ -9,7 +9,7 @@ function App() {
     <div>
       <Rectangulo texto="Para poder configurar tu monedito, primero necesitas activar Bluetooth en tu dispositivo y conectarte a una red WiFi." imagen={image0_2014_275}/>
       <MyButton buttonText="Siguiente"/>
-      <MyInput placeholderText={'Holis'}/>
+      <MyInput placeholderText={'Holis'} tituloInput={'Holis'}/>
     </div>
   )
 }

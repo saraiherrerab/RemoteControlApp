@@ -22,20 +22,30 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.input {
+
+input {
     width: 100%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 0 5px;
     box-sizing: border-box;
-    border: 2px solid blue;
-    border-radius: 4px;
-    background-color: #f8f8f8;
-    font-size: 16px;
+    border: 2px solid var(--dark--blue);
+    border-radius: 10px;
+    background-color: var(--white);
+    color: var(--dark--blue);
     transition: 0.3s;
+    font-family: "Rubik", sans-serif; 
   }
   
-  .input:focus {
-    border-color: red;
-    background-color: #e8e8e8;
+  input:focus {
+    border-color: var(--sky--blue);
+    background-color: var(--white);
   }
   
+
+.tituloInput{
+  margin-bottom: 5px;
+  margin-left:10px;
+  color: var(--dark--blue);
+  font-family: "Rubik", sans-serif; 
+  font-weight:bold;
+}

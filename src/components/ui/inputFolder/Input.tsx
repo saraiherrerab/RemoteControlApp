@@ -3,9 +3,10 @@ import "./Input.css";
 
 export interface InputProps {
   placeholderText: string;
+  tituloInput: string;
 }
 
-const MyInput: React.FC<InputProps> = ({ placeholderText }) => {
+const MyInput: React.FC<InputProps> = ({ placeholderText, tituloInput }) => {
   const [inputValue, setInputValue] = useState('');
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -14,11 +15,14 @@ const MyInput: React.FC<InputProps> = ({ placeholderText }) => {
   };
 
   return (
-    <input 
-      value={inputValue} 
-      onChange={handleChange} 
-      placeholder={placeholderText} 
-    />
+    <div>
+      <p className="tituloInput">{tituloInput}</p>
+      <input 
+        value={inputValue} 
+        onChange={handleChange} 
+        placeholder={placeholderText} 
+      />
+    </div>
   );
 };
 
