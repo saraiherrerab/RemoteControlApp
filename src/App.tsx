@@ -1,6 +1,6 @@
-import MyButton from './components/ui/buttonFolder/Button.tsx' 
-import Rectangulo from './components/ui/rectangulitoFolder/Rectangulo.tsx'
-import MyInput from './components/ui/inputFolder/Input.tsx'
+import MyButton from './components/ui/ButtonFolder/Button.tsx' 
+import Rectangulo from './components/ui/WelcomeSection/Rectangulo.tsx'
+import MyInput from './components/ui/InputFolder/Input.tsx'
 import './App.css'
 import image0_2014_275 from './assets/caritaFeliz.svg';
 
