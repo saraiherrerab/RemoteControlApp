@@ -15,3 +15,4 @@ export const Siguiente = Template.bind({});
 Siguiente.args = {
   buttonText: 'Siguiente',
 };
+
