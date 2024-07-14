@@ -16,7 +16,9 @@ function App() {
           <MyInput placeholderText={'Hola'} tituloInput={'Holis'}/>
           <MyInput placeholderText={'Hola'} tituloInput={'Holis'}/>
         </div>
+        <div className="inputs-section-wifi">
         <WifiDecoration texto="Wifi" imagen={image0_2015_244}/>
+        </div>
       </div>
       <BluetoothSection bluetoothText="Bluetooth"/>
       <MyButton buttonText="Siguiente"/>

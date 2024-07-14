@@ -25,7 +25,7 @@
 
 .rectangulo {
     border-radius: 20px;
-    width: 314px; 
+    width: 100%; 
     margin:20px;
     min-height: 120px; 
     background-color: var(--dark--blue); 
