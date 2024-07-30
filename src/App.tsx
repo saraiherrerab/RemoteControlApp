@@ -1,29 +1,32 @@
-import MyButton from './components/ui/ButtonFolder/Button.tsx' 
-import Rectangulo from './components/ui/WelcomeSection/Rectangulo.tsx'
-import MyInput from './components/ui/InputFolder/Input.tsx'
-import WifiDecoration from './components/ui/WifiDecoration/WifiDecoration.tsx'
-import BluetoothSection from './components/ui/BluetoothSection/BluetoothSection.tsx'
-import './App.css'
-import image0_2014_275 from './assets/caritaFeliz.svg';
-import image0_2015_244 from './assets/wifiIcon.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import HomePage from './pages/HomePage.tsx'
 
-function App() {
+const Home = () => <h1>Home Page</h1>;
+
+const Users = () => <h1>Users</h1>;
+
+const App = () => {
   return (
-    <div >
-      <Rectangulo texto="Para poder configurar tu monedito, primero necesitas activar Bluetooth en tu dispositivo y conectarte a una red WiFi." imagen={image0_2014_275}/>
-      <div className="inputs-section-big">
-        <div className="inputs-section-little">
-          <MyInput placeholderText={'Hola'} tituloInput={'Holis'}/>
-          <MyInput placeholderText={'Hola'} tituloInput={'Holis'}/>
-        </div>
-        <div className="inputs-section-wifi">
-        <WifiDecoration texto="Wifi" imagen={image0_2015_244}/>
-        </div>
-      </div>
-      <BluetoothSection bluetoothText="Bluetooth"/>
-      <MyButton buttonText="Siguiente"/>
-    </div>
-  )
-}
+    <Router>
+      <header>
+        <Link to="/">Home</Link>
+        <Link to="/HomePage">Notes</Link>
+        <Link to="/users">Users</Link>
+      </header>
 
-export default App
+    
+      <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/HomePage" element={<HomePage/>} />
+          <Route path="/users" element={<Users />} />
+        </Routes>
+      </Router>
+   
+
+  );
+};
+
+export default App;
+
+
