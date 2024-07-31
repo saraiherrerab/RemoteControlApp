@@ -22,14 +22,25 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.messageShape{
-    background:white;
+.messageShape {
+    border-radius: 10px;
+    padding: 5px;
+    width: 80%;
+    margin: 20px;
+    background: white;
+    height: 4vh; /* Ajusta la altura según tus necesidades */
+    display: flex;
+    align-items: center;
+    
 }
 
-.icon{
-    width:auto;
+.icon {
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 10px;
 }
 
-.messageText{
-    text-decoration-color: #DA2714;
+.messageText {
+    color: black;
+    font-size: 12px;
 }
