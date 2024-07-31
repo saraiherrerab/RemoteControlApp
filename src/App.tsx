@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import HomePage from './pages/HomePage.tsx'
+import MessagesPage from './pages/MessagesPage.tsx'
 
 const Home = () => <h1>Home Page</h1>;
 
-const Users = () => <h1>Users</h1>;
 
 const App = () => {
   return (
@@ -19,7 +19,7 @@ const App = () => {
       <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/HomePage" element={<HomePage/>} />
-          <Route path="/users" element={<Users />} />
+          <Route path="/users" element={<MessagesPage />} />
         </Routes>
       </Router>
    
