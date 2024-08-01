@@ -5,6 +5,7 @@ import WifiDecoration from '../components/ui/WifiDecoration/WifiDecoration.tsx'
 import BluetoothSection from '../components/ui/BluetoothSection/BluetoothSection.tsx'
 import image0_2014_275 from '../assets/caritaFeliz.svg';
 import image0_2015_244 from '../assets/wifiIcon.svg';
+import { Link } from "react-router-dom";
 
 
 function HomePage() {
@@ -21,7 +22,8 @@ function HomePage() {
         </div>
       </div>
       <BluetoothSection bluetoothText="Bluetooth"/>
-      <MyButton buttonText="Siguiente"/>
+      <Link to= './messages'> <MyButton buttonText="Siguiente"/></Link>
+      
     </div>
   )
 }
