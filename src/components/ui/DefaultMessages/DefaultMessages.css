@@ -22,31 +22,50 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.messageShape-container {
+    width: 100%; /* Adjust width as needed */
+    justify-content: center;
+    margin-left:5vh;
+    
+  } 
+
 .messageShape {
     border-radius: 10px;
     padding: 5px 5px 5px 10px;
-    width: 80%;
-    margin: 20px;
+    width: 90%;
+    margin: 5vh;
     background: var(--light--grey);
-    height: 4vh; /* Ajusta la altura según tus necesidades */
+    height: 5vh; /* Ajusta la altura según tus necesidades */
     display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido dentro de messageShape */
     align-items: center;
+    border: 2px solid var(--light--grey);
+
+    @media (max-width: 768px) {
+        width: 100%; /* Ajusta el ancho para pantallas más pequeñas */
+        font-size: 15px;
+      }
     
 }
 
+
 .messageShape-active {
-    border: 2px solid var(--color-green) /* Cambia el color del borde a verde */
+    border: 2px solid var(--color-green) 
   }
 
+
+
 .icon {
-    width: 1.5em;
-    height: 1.5em;
-    margin-right: 10px;
+    width: 1em;
+    height: 1.3em;
+    margin-left: 5px;
+    
 }
 
 .messageText {
     color: black;
-    font-size: 12px;
+    font-size: 1em;
+    margin-left: -35px;
 }
 
 .checkbox-button {
@@ -61,8 +80,8 @@
 .checkbox-button .checkbox-button__label {
     background-color: var(--light--grey);
     outline: 1px solid var(--dark--grey);
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1rem; /* Aumenta el tamaño del checkbox */
+    height: 1rem;
     border-radius: 1rem;
     display: inline-block;
     position: relative;
@@ -74,21 +93,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 1rem;
-    height: 1rem;
+    width: 0.75rem; /* Aumenta el tamaño del círculo dentro del checkbox */
+    height: 0.75rem;
     background-color: var(--dark--grey);
     content: '';
     border-radius: 50%;
-    box-shadow: inset 0px 0px 0px 1px var(--dark--grey);
+    box-shadow: inset 0px 0px 0px 0px var(--dark--grey);
 }
 
 
-.checkbox-button .checkbox-button__message:checked + .checkbox-button__label {
-    background-color: var(--light--grey);
-    outline: 1px solid var(--color-green);
-    
-}
-.checkbox-button .checkbox-button__message:checked + .checkbox-button__label:before {
-    background-color: var(--color-green);
-    box-shadow: inset 0px 0px 0px 1px var(--color-green);
-}

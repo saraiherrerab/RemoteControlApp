@@ -11,7 +11,10 @@ const MyButton: React.FC<ButtonProps> = ({ buttonText }) => {
   };
 
   return (
-    <button onClick={handleClick}>{buttonText}</button>
+    <div className="button-container">
+      <button onClick={handleClick}>{buttonText}</button>
+    </div>
+    
   );
 };
 

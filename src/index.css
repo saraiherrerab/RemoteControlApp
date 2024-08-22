@@ -71,6 +71,11 @@ p{
   overflow-wrap: break-word; /* Permite que las palabras largas se rompan y pasen a la siguiente línea */
 }
 
+.button-container {
+  text-align: center; /* Centra el contenido dentro del contenedor */
+  margin: 5px auto; /* Agrega márgenes para espaciar el botón */
+} 
+
 button {
   border-radius: 10px;
   border: 1px solid transparent;
@@ -85,8 +90,19 @@ button {
   height: 10%;
   margin:20px 20px 20px 0;
 
-  
+  @media (max-width: 768px) {
+    .button-container {
+      width: 95%; /* Ajusta el ancho del contenedor para pantallas más pequeñas */
+    }
+
+    button {
+      width: 100%; /* En pantallas pequeñas, el botón ocupará todo el ancho del contenedor */
+    }
+  }
+
 }
+
+
 button:hover {
   border-color: var(--white);
 }
@@ -96,15 +112,21 @@ button:focus-visible {
 }
 .rectangulo {
   border-radius: 20px;
-  width: 100%; 
+  width: 90%; 
   margin:20px;
+  min-height: 120px; 
   background-color: var(--dark--blue); 
-  display: flex; 
-  justify-content: left; 
-  align-items: center; 
+  display: flex; /* Usamos flexbox para centrar el texto */
+  justify-content: left; /* Centra el texto horizontalmente */
+  align-items: center; /* Centra el texto verticalmente */
   font-family: "Rubik", sans-serif; 
   overflow-wrap: break-word;
-  margin-left:0;
+
+  @media (max-width: 768px) {
+    width: 80%; /* Ocupa el 90% del ancho de la pantalla */
+    margin: 20px auto; /* Aumenta los márgenes superior e inferior, y agrega un margen izquierdo y derecho */
+    font-size: 14px;
+  }
   
 }
 
@@ -140,6 +162,8 @@ input {
   color: var(--dark--blue);
   transition: 0.3s;
   font-family: "Rubik", sans-serif; 
+
+  
 }
 
 input:focus {
@@ -194,6 +218,14 @@ font-size: 14px;
   display:grid;
   grid-template-columns: 4fr  1fr;
   margin-left:-20px;
+
+  @media (max-width: 768px) {
+    width: 80%; /* Ocupa el 90% del ancho de la pantalla */
+    margin: 20px auto; /* Aumenta los márgenes superior e inferior, y agrega un margen izquierdo y derecho */
+    font-size: 14px;
+  }
+
+  
 }
 
 .inputs-section-little{
@@ -206,6 +238,162 @@ font-size: 14px;
   padding-left:50%;
   
 }
+
+.bluetooth-section {
+  display: grid; /* Use grid layout */
+  background-color: var(--white);
+  outline: 1px solid var(--light--grey);
+  width: 95%;  /* Adjust width as needed */
+  height: 10%;  /* Adjust height as needed */
+  border-radius: 20px;
+  position: relative; /* Establish positioning context for child elements */
+  margin: 20px 40px 20px 0;
+  padding:5px 5px 5px 15px;
+
+  @media (max-width: 768px) {
+    width: 70%; /* Ocupa el 90% del ancho de la pantalla */
+    margin: 20px auto; /* Aumenta los márgenes superior e inferior, y agrega un margen izquierdo y derecho */
+    font-size: 14px;
+  }
+}
+
+.bluetooth-text {
+  grid-area: 1 / 1; 
+  text-align: left; /* Align text to the left */
+  color: var(--dark--grey);
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  
+  /* Remove unnecessary styles for grid layout */
+  /* position: relative;  */
+  /* display: inline-block; */
+}
+
+
+.switch-button {
+  grid-area: 1 / 2; 
+  display: inline-block;
+  margin-left: auto;
+  
+}
+.switch-button .switch-button__checkbox {
+  display: none;
+}
+.switch-button .switch-button__label {
+  background-color: var(--light--grey);
+  border-color: var(--dark--grey);
+  width: 2.5rem;
+  height: 1rem;
+  border-radius: 1rem;
+  display: inline-block;
+  position: relative;
+  margin: 0rem 1rem;
+}
+.switch-button .switch-button__label:before {
+  transition: .2s;
+  display: block;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--dark--grey);
+  content: '';
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 0px 1px var(--dark--grey);
+}
+
+
+.messageShape {
+  border-radius: 10px;
+  padding: 5px 5px 5px 10px;
+  width: 90%;
+  margin: 5vh;
+  background: var(--light--grey);
+  height: 5vh; /* Ajusta la altura según tus necesidades */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente el contenido dentro de messageShape */
+  align-items: center;
+  border: 2px solid var(--light--grey);
+
+  @media (max-width: 768px) {
+      width: 100%; /* Ajusta el ancho para pantallas más pequeñas */
+      font-size: 15px;
+    }
+  
+}
+
+
+.messageShape-active {
+  border: 2px solid var(--color-green) 
+}
+
+
+
+.icon {
+  width: 1em;
+  height: 1.3em;
+  margin-left: 5px;
+  
+}
+
+.messageText {
+  color: black;
+  font-size: 1em;
+  margin-left: -35px;
+  
+}
+
+.checkbox-button {
+  grid-area: 1 / 2; 
+  display: inline-block;
+  margin-left: auto;
+  
+}
+.checkbox-button .checkbox-button__message{
+  display: none;
+}
+.checkbox-button .checkbox-button__label {
+  background-color: var(--light--grey);
+  outline: 1px solid var(--dark--grey);
+  width: 1rem; /* Aumenta el tamaño del checkbox */
+  height: 1rem;
+  border-radius: 1rem;
+  display: inline-block;
+  position: relative;
+  margin: 10px 10px 5px 5px;
+}
+.checkbox-button .checkbox-button__label:before {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.75rem; /* Aumenta el tamaño del círculo dentro del checkbox */
+  height: 0.75rem;
+  background-color: var(--dark--grey);
+  content: '';
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 0px 0px var(--dark--grey);
+}
+
+
+
+
+.checkbox-button .checkbox-button__message:checked + .checkbox-button__label {
+  background-color: var(--light--grey);
+  outline: 1px solid var(--color-green);
+  
+}
+
+.checkbox-button .checkbox-button__message:checked + .checkbox-button__label:before {
+  background-color: var(--color-green);
+  box-shadow: inset 0px 0px 0px 1px var(--color-green);
+}
+
+
+
+
+
 
 
 @media (prefers-color-scheme: light) {

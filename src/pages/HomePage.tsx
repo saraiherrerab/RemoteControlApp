@@ -14,8 +14,8 @@ function HomePage() {
       <Rectangulo texto="Para poder configurar tu monedito, primero necesitas activar Bluetooth en tu dispositivo y conectarte a una red WiFi." imagen={image0_2014_275}/>
       <div className="inputs-section-big">
         <div className="inputs-section-little">
-          <MyInput placeholderText={'Hola'} tituloInput={'Holis'}/>
-          <MyInput placeholderText={'Hola'} tituloInput={'Holis'}/>
+          <MyInput placeholderText={'Hola'} tituloInput={'Nombre de la red'}/>
+          <MyInput placeholderText={'Hola'} tituloInput={'Contraseña'}/>
         </div>
         <div className="inputs-section-wifi">
         <WifiDecoration texto="Wifi" imagen={image0_2015_244}/>

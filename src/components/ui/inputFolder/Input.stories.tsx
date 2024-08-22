@@ -15,4 +15,5 @@ export const Siguiente = Template.bind({});
 Siguiente.args = {
     placeholderText: 'Siguiente',
     tituloInput: 'Titulo input',
+    idInputWifi: 'primer-id'
 };

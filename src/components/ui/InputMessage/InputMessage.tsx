@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-import "./Input.css";
+import "./InputMessage.css";
 
-export interface InputProps {
+export interface InputMessageProps {
   placeholderText: string;
-  tituloInput: string;
-  idInputWifi?: string;
+  idInputMessage?: string;
 }
 
-const MyInput: React.FC<InputProps> = ({ placeholderText, tituloInput, idInputWifi }) => {
+const InputMessage: React.FC<InputMessageProps> = ({ placeholderText, idInputMessage }) => {
   const [inputValue, setInputValue] = useState('');
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -17,9 +16,9 @@ const MyInput: React.FC<InputProps> = ({ placeholderText, tituloInput, idInputWi
 
   return (
     <div>
-      <p className="tituloInput">{tituloInput}</p>
       <input 
-        id={idInputWifi}
+        className="inputMessage"
+        id={idInputMessage}
         value={inputValue} 
         onChange={handleChange} 
         placeholder={placeholderText} 
@@ -28,4 +27,4 @@ const MyInput: React.FC<InputProps> = ({ placeholderText, tituloInput, idInputWi
   );
 };
 
-export default MyInput;
+export default InputMessage;

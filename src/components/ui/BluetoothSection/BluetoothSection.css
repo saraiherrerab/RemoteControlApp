@@ -23,6 +23,9 @@
 
 .bluetooth-section {
     display: grid; /* Use grid layout */
+    grid-template-columns: 1fr auto; /* Ajusta el ancho de las columnas según sea necesario */
+     grid-template-areas:
+    "text switch";
     background-color: var(--white);
     outline: 1px solid var(--light--grey);
     width: 95%;  /* Adjust width as needed */
@@ -31,10 +34,12 @@
     position: relative; /* Establish positioning context for child elements */
     margin: 20px 40px 20px 0;
     padding:5px 5px 5px 15px;
+    align-items: center;
   }
   
   .bluetooth-text {
-    grid-area: 1 / 1; 
+    
+    grid-area: text;
     text-align: left; /* Align text to the left */
     color: var(--dark--grey);
     font-family: "Rubik", sans-serif;
@@ -48,9 +53,11 @@
 
 
 .switch-button {
-    grid-area: 1 / 2; 
+    margin-top: 5px;
+    grid-area: switch;
     display: inline-block;
     margin-left: auto;
+    margin-right:0;
     
 }
 .switch-button .switch-button__checkbox {

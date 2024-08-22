@@ -21,34 +21,22 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.button-container {
-  width: 80%;
-  margin: 0 auto;
-} 
 
-button {
-    border-radius: 10px;
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1rem;
-    font-family: "Rubik", sans-serif; 
-    background-color: var(--dark--blue);
-    cursor: pointer;
-    transition: border-color 0.25s;
-    font-size: 15px;
+.inputMessage {
     width: 100%;
-    height: 10%;
-
-    @media (max-width: 768px) {
-      width: 90%;
-      margin: 20px auto;
-    }
-    
+    padding: 12px 20px;
+    margin: 0 5px;
+    box-sizing: border-box;
+    border: 2px solid var(--dark--blue);
+    border-radius: 10px;
+    background-color: var(--white);
+    color: var(--dark--blue);
+    transition: 0.3s;
+    font-family: "Rubik", sans-serif; 
+    border: 2px solid var(--light-grey);
   }
-  button:hover {
-    border-color: var(--white);
-  }
-  button:focus,
-  button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
+  
+  .inputMessage:focus {
+    border-color: var(--sky--blue);
+    background-color: var(--white);
   }

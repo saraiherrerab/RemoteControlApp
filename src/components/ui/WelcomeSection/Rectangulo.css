@@ -34,9 +34,15 @@
     align-items: center; /* Centra el texto verticalmente */
     font-family: "Rubik", sans-serif; 
     overflow-wrap: break-word;
+
+    @media (max-width: 768px) {
+      width: 90%; /* Ocupa el 90% del ancho de la pantalla */
+      margin: 20px 10px; /* Aumenta los márgenes superior e inferior, y agrega un margen izquierdo y derecho */
+      font-size: 14px;
+    }
     
   }
-  
+
   .texto {
     width: 60%;
     height: 100%;
